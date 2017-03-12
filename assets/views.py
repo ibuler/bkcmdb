@@ -18,6 +18,7 @@ def asset_list(request):
     return render(request, 'asset/list.html', {'form': form, 'assets': assets})
 
 
+@login_required
 @require_POST
 def asset_add(request):
     form = AssetForm(request.POST)
@@ -28,7 +29,7 @@ def asset_add(request):
         return HttpResponse('输入非法')
 
 
-# @login_required
+@login_required
 @require_POST
 def asset_del(request):
     asset_id = request.POST.get('id')
