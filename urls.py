@@ -8,6 +8,13 @@ from django.contrib import admin
 # admin.autodiscover()
 from django.conf import settings
 # 公共URL配置
+
+from django.http.response import HttpResponse
+
+
+def hello(request):
+    return HttpResponse('Hello world')
+
 urlpatterns = patterns(
     '',
     # Django后台数据库管理
@@ -15,6 +22,7 @@ urlpatterns = patterns(
     # 用户登录鉴权--请勿修改
     url(r'^account/', include('account.urls')),
     # 应用功能开关控制--请勿修改
+    url(r'^cmdb/', hello),
     url(r'^app_control/', include('app_control.urls')),
     # 在home_application(根应用)里开始开发你的应用的主要功能
     url(r'^', include('home_application.urls')),
