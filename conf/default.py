@@ -110,6 +110,7 @@ INSTALLED_APPS = (
     'account',
     'home_application',
     'assets',
+    'users',
 )
 
 # ==============================================================================
@@ -316,6 +317,7 @@ LOGGING = {
     }
 }
 
-INSTALLED_APPS_CUSTOM = (
+INSTALLED_APPS_CUSTOM = [
     'assets',
-)
+    'users',
+]

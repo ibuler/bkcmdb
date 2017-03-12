@@ -9,6 +9,8 @@ from django.contrib import admin
 from django.conf import settings
 # 公共URL配置
 
+from users.views import user_list
+
 
 urlpatterns = patterns(
     '',
@@ -18,9 +20,10 @@ urlpatterns = patterns(
     url(r'^account/', include('account.urls')),
     # 应用功能开关控制--请勿修改
     url(r'^assets/', include('assets.urls', namespace='assets')),
+    url(r'^users/', include('users.urls', namespace='users')),
     url(r'^app_control/', include('app_control.urls')),
     # 在home_application(根应用)里开始开发你的应用的主要功能
-    url(r'^', include('home_application.urls')),
+    url(r'^', user_list),
 )
 
 
