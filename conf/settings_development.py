@@ -8,13 +8,24 @@ from settings import APP_ID
 # ===============================================================================
 # 数据库设置, 本地开发数据库设置
 # ===============================================================================
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',  # 默认用mysql
+#         'NAME': 'db.sqlite3',                        # 数据库名 (默认与APP_ID相同)
+#         'USER': 'root',                        # 你的数据库user
+#         'PASSWORD': '',                        # 你的数据库password
+#         'HOST': '127.0.0.1',                   # 开发的时候，使用localhost
+#         'PORT': '3306',                        # 默认3306
+#     },
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',  # 默认用mysql
-        'NAME': 'db.sqlite3',                        # 数据库名 (默认与APP_ID相同)
-        'USER': 'root',                        # 你的数据库user
-        'PASSWORD': '',                        # 你的数据库password
-        'HOST': '127.0.0.1',                   # 开发的时候，使用localhost
+        'ENGINE': 'django.db.backends.mysql',  # 默认用mysql
+        'NAME': 'cmdb',                        # 数据库名 (默认与APP_ID相同)
+        'USER': 'cmdb',                            # 你的数据库user
+        'PASSWORD': 'redhat',                        # 你的数据库password
+        'HOST': '192.168.244.129',                   		   # 数据库HOST
         'PORT': '3306',                        # 默认3306
     },
 }
