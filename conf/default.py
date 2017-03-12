@@ -109,6 +109,7 @@ INSTALLED_APPS = (
     'app_control',
     'account',
     'home_application',
+    'assets',
 )
 
 # ==============================================================================
@@ -316,5 +317,5 @@ LOGGING = {
 }
 
 INSTALLED_APPS_CUSTOM = (
-    'cmdb',
+    'assets',
 )
